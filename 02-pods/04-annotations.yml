@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: pod
+metadata: 
+  name: annotations
+  labels: #we can give both labels &annotations also
+    name: bsk
+    addr: "kgl"
+  annotations:
+    com.roboshop.training.duration: "120 hours"
+    jenkins.url: "https://jenkins.com/roboshop/cart/#45"
+spec:
+  containers:
+  - name: hello
+    image: apache2:latest
+    ports:
+    - containerPort: 80
